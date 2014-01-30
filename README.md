@@ -14,7 +14,7 @@ generic-fn-args -- Arguments specific to that generic function, appended to the 
 docstring -- Optional docstring
 
 Example:
-
+```lisp
 (defprotocol (my-arg your-arg)
   (f1 (arg1) "Example function 1")
   (f2 (arg2 &key key1 key2)))
@@ -25,13 +25,14 @@ Example:
   (:documentation "Example function 1"))
   
 (defgeneric f2 (my-arg your-arg arg2 &key key1 key2))
-
+```
 ========
 
 DEFMETHOD* behaves exactly like DEFMETHOD, but if one its arguments are named SELF it allows for easy access to slots and accessors with the sigils $ and @ respecitively.
 
 Example:
 
+```lisp
 (defclass foo ()
   (x)
   (y :accessor y))
@@ -43,3 +44,4 @@ Example:
 
 (defmethod add ((self foo) (num number))
   (+ (slot-value self 'x) (y self) num))
+```
