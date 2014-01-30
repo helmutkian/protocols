@@ -1,4 +1,4 @@
-(in-package #:com.helmutkian.cl-self)
+(in-package #:com.helmutkian.protocols)
 
 ;;; Utils from PG's "On Lisp"
 
